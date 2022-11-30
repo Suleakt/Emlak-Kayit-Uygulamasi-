@@ -1,0 +1,68 @@
+﻿@model IEnumerable<Emlakci2.Models.EMLAKCI>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<p class="btn btn-light" style="margin-top:50px;">
+    @Html.ActionLink("Yeni Kurumsal Üye", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ADSOYAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EMAIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TELEFON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SIFRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YETKI_CREATE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YETKI_EDIT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YETKI_DELETE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADSOYAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EMAIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TELEFON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SIFRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YETKI_CREATE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YETKI_EDIT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YETKI_DELETE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EMLAKCIID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EMLAKCIID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EMLAKCIID })
+        </td>
+    </tr>
+}
+
+</table>

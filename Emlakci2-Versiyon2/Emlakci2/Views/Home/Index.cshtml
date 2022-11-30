@@ -1,0 +1,16 @@
+﻿@model List<Emlakci2.Models.EMLAKCI>
+
+
+    @{
+        ViewBag.Title = "Index";
+        Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+        @*foreach(var item in Model)
+        {
+            <h1>@item.ADSOYAD</h1>
+        }*@
+        
+        @Html.Action("Detay")
+        <p class="btn btn-light" style="margin-top:25px;">
+            @Html.ActionLink("Çıkış Yap", "Logout", "Account")
+        </p>
+    }

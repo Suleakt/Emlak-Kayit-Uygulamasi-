@@ -1,0 +1,46 @@
+﻿@model Emlakci2.Models.EV
+
+@{
+    ViewBag.Title = "Incele";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h5 style="padding-top:25px; padding-bottom:10px; text-transform:capitalize;">@Model.FIYAT TL | @Model.IL @Model.ILCE @Model.MAHALLE | @Model.SATISDURUM  @Model.TUR</h5>
+
+<div class="card" style="width: 500px;">
+    <img class="card-img-top" src=~/Content/@Model.IMAGE alt="Card image cap">
+    <div class="card-body">
+        <h5 class="card-title">@Model.FIYAT TL</h5>
+        <p class="card-text">@Model.IL @Model.ILCE @Model.MAHALLE @Model.ADRES</p>
+        <p class="card-text" style = "text-transform:capitalize;">@Model.SATISDURUM @Model.TUR | Oda Sayısı: @Model.ODASAY | Metrekare: @Model.METREKARE </p>
+        <p class="card-text">Kat Numarası: @Model.KATNO | Ev Yapım Tarihi: @Model.EVYAPIMTARIHI</p>
+        <p class="card-text">Aidat: @Model.AIDAT TL | Depozito: @Model.DEPOZITO TL</p>
+        <p class="card-text">Balkon Sayısı: @Model.BALKON | Banyo Sayısı: @Model.BANYOSAY </p>
+        <p class="card-text" style = "text-transform:capitalize;">Yakıt Tipi: @Model.YAKITTIPI | Isınma Tipi: @Model.ISINMATIPI </p>
+        <h6 class="card-subtitle mb-2 text-muted">@Model.ACIKLAMA</h6>
+  
+        @{if (Model.SITEMI == "0")
+            { <p class="card-text"> Site Değil</p> }
+            else
+            { <p class="card-text"> Site</p> }
+        }
+        @{if (Model.ESYADURUM == "0")
+            { <p class="card-text"> Eşyalı Değil</p> }
+            else
+            { <p class="card-text"> Eşyalı</p> }
+        }
+        @{if (Model.OGRENCIBEKAR == "0")
+            { <p class="card-text"> Öğrenci Ve Bekar İçin Uygun Değil</p> }
+            else
+            { <p class="card-text"> Öğrenci Ve Bekar İçin Uygun</p> }
+        }
+        @{if (Model.OTOPARK == "0")
+            { <p class="card-text"> Otopark Yok</p> }
+            else
+            { <p class="card-text"> Otopark Var</p> }
+        }
+        <a href="/Home/Index" class="btn btn-primary">Anasayfaya Dön</a>
+    </div>
+
+</div>
+

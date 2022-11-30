@@ -1,0 +1,241 @@
+﻿@model Emlakci2.Models.EV
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>EV</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EV_SAHIBI.AD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EV_SAHIBI.AD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILCE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILCE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAHALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAHALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SATISDURUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SATISDURUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TUR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TUR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ILANNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ILANNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIYAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIYAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ODASAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ODASAY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.METREKARE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.METREKARE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SATILDIMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SATILDIMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IMAGE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IMAGE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KATNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KATNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ADRES)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADRES)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EVYAPIMTARIHI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EVYAPIMTARIHI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESYADURUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESYADURUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCIBEKAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCIBEKAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AIDAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AIDAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DEPOZITO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DEPOZITO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BALKON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BALKON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BANYOSAY)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BANYOSAY)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SITEMI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SITEMI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OTOPARK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OTOPARK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.YAKITTIPI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.YAKITTIPI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ISINMATIPI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ISINMATIPI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FIYATTUR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FIYATTUR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ACIKLAMA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ACIKLAMA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

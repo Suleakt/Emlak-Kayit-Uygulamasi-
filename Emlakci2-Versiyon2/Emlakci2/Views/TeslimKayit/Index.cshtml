@@ -1,0 +1,50 @@
+﻿@model IEnumerable<Emlakci2.Models.TESLIM_EDILEN_EV>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<p class="btn btn-light" style="margin-top:50px;">
+    @Html.ActionLink("Teslim Edilen Ev Ekle", "Create")
+</p>
+<table class="table table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EV.IL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MUSTERI.ADSOYAD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TARIH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISLEMTAMAMLANDIMI)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EV.IL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MUSTERI.ADSOYAD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TARIH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISLEMTAMAMLANDIMI)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TESLIMEDILENID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TESLIMEDILENID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TESLIMEDILENID })
+        </td>
+    </tr>
+}
+
+</table>

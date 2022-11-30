@@ -1,0 +1,190 @@
+﻿@model IEnumerable<Emlakci2.Models.EV>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*<h2>Index</h2>*@
+
+<p class="btn btn-light" style="margin-top:50px;">
+    @Html.ActionLink("Yeni Ev Kaydı", "Create")
+</p>
+<table class="table table-striped">
+    <tr class="table-warning">
+        <th>
+            @Html.DisplayNameFor(model => model.EV_SAHIBI.AD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILCE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MAHALLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SATISDURUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ILANNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIYAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ODASAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.METREKARE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SATILDIMI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IMAGE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KATNO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ADRES)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EVYAPIMTARIHI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ESYADURUM)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OGRENCIBEKAR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AIDAT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPOZITO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BALKON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BANYOSAY)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SITEMI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OTOPARK)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.YAKITTIPI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ISINMATIPI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FIYATTUR)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ACIKLAMA)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EV_SAHIBI.AD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILCE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MAHALLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SATISDURUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ILANNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIYAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ODASAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.METREKARE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SATILDIMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IMAGE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KATNO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ADRES)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EVYAPIMTARIHI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ESYADURUM)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OGRENCIBEKAR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AIDAT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DEPOZITO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BALKON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BANYOSAY)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SITEMI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OTOPARK)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YAKITTIPI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ISINMATIPI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FIYATTUR)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ACIKLAMA)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EVID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EVID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EVID })
+        </td>
+    </tr>
+}
+
+</table>

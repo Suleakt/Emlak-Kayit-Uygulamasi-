@@ -1,0 +1,36 @@
+﻿@model List<Emlakci2.Models.EMLAKCI>
+
+@{
+    ViewBag.Title = "Iletisim";
+    Layout = "~/Views/Shared/_KullaniciLayout.cshtml";
+}
+
+<h2 style="margin-top:50px;">İletişim</h2>
+<table class="table table-striped">
+    <tr>
+        <th scope="col">
+            EMLAKÇI ADI
+        </th>
+        <th scope="col">
+            TELEFON
+        </th>
+        <th scope="col">
+            EMAIL
+        </th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.ADSOYAD
+            </td>
+            <td>
+                @item.TELEFON
+            </td>
+            <td>
+                @item.EMAIL
+            </td>
+        </tr>
+
+    }
+</table>

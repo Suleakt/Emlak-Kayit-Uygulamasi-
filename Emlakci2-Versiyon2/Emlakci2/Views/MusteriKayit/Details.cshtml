@@ -1,0 +1,99 @@
+﻿@model Emlakci2.Models.MUSTERI
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MUSTERI</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ADSOYAD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ADSOYAD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TELEFON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TELEFON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MINFIYAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MINFIYAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MAXFIYAT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MAXFIYAT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TUR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TUR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SATISDURUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SATISDURUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ESYADURUM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ESYADURUM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OGRENCIBEKAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OGRENCIBEKAR)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ALINANILANNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ALINANILANNO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MUSTERIID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

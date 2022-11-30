@@ -1,0 +1,28 @@
+﻿@model List<Emlakci2.Models.EV>
+
+@foreach (var item in Model)
+    {
+
+<h1 style="padding-bottom:25px"></h1>
+<div class="card border-info mb-3 shadow p-3 bg-white rounded">
+    <div class="row no-gutters">
+        <div class="col-md-3">
+            <img src=~/Content/@item.IMAGE width="180" height="180" class="card-img" alt="...">
+        </div>
+        <div class="col-md-9">
+            <div class="card-body">
+                <h5 class="card-title">
+                    @item.FIYAT TL
+                    @*<a href="/Home/Detay/@item.EVDETAYID"></a>*@
+
+
+                </h5>
+                <p class="card-text" style = "text-transform:capitalize;">@item.SATISDURUM @item.TUR , @item.ODASAY , @item.METREKARE </p>
+                <p class="card-text">@item.IL @item.ILCE @item.MAHALLE</p>
+                <a href="/Home/Incele/@item.EVID" class="btn btn-primary">İncele</a>
+                <p class="card-text"><small class="text-muted">Gönderim Tarihi: @DateTime.Now</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+            }
